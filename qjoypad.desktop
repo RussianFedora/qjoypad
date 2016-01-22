@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=Средство настройки геймпада
+Comment=Gamepad tweaker
+Exec=/usr/bin/qjoypad
+GenericName[ru_RU]=qJoypad
+GenericName=qJoypad
+Icon=/usr/share/pixmaps/qjoypad/gamepad4-64x64.png
+MimeType=
+Name[ru_RU]=qJoypad
+Name=qJoypad
+StartupNotify=false
+Categories=Game
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=
