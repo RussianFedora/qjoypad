@@ -36,7 +36,6 @@ game controller.
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 
-
 %changelog
 * Sat Jan 23 2016 V1TSK <vitaly@easycoding.org> - 4.2.1-1
 - Changed source to fork. Updated SPEC file.
