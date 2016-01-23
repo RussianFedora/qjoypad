@@ -7,12 +7,13 @@ License: GPLv2
 Url: https://github.com/panzi/qjoypad
 Source0: https://github.com/panzi/qjoypad/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires: pkgconfig(Qt5X11Extras)
+BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(xtst)
-BuildRequires: qt5-qtbase-devel
-BuildRequires: qt5-linguist
-BuildRequires: cmake
-BuildRequires: gcc-c++
 BuildRequires: desktop-file-utils
+BuildRequires: qt5-linguist
+BuildRequires: gcc-c++
+BuildRequires: cmake
 
 %description
 QJoyPad takes input from a gamepad or joystick and translates it into key
