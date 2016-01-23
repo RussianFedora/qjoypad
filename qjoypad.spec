@@ -35,9 +35,6 @@ cd src
 %make_install
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %doc README.txt
 %license LICENSE.txt
