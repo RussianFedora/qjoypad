@@ -4,7 +4,7 @@
 
 Name: qjoypad
 Version: 4.2.1
-Release: 2%{?dist}
+Release: 2.%{date}git%{shortcommit0}%{?dist}
 Summary: Remap joystick events as keyboard or mouse events
 
 License: GPLv2
