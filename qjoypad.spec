@@ -28,6 +28,21 @@ game controller.
 %make_install
 %find_lang %{name} --with-qt
 
+%check
+desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+
+%post
+/bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+
+%postun
+if [ $1 -eq 0 ] ; then
+    /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
+    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+fi
+
+%posttrans
+/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+
 %files -f %{name}.lang
 %doc README.md INSTALL.txt
 %license LICENSE.txt
