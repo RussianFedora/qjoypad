@@ -38,9 +38,6 @@ desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 %clean
 rm -rf %{buildroot}
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %files
 %defattr(-,root,root,-)
 %doc LICENSE.txt README.txt
