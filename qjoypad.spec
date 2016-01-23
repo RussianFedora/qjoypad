@@ -18,7 +18,7 @@ strokes or mouse actions, letting you control any XWindows program with your
 game controller.
 
 %prep
-%autosetup -p1
+%autosetup
 
 %build
 %cmake .
