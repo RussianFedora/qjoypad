@@ -11,7 +11,6 @@ BuildRequires: gcc-c++
 BuildRequires: qt5-qtbase-devel
 BuildRequires: desktop-file-utils
 BuildRequires: libXtst-devel
-BuildRequires: /usr/bin/desktop-file-validate
 
 %description
 QJoyPad takes input from a gamepad or joystick and translates it into key
