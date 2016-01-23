@@ -48,7 +48,6 @@ fi
 %doc README.md INSTALL.txt
 %license LICENSE.txt
 %{_bindir}/%{name}
-%dir %{_datadir}/icons/hicolor/*/apps
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 
