@@ -39,7 +39,6 @@ desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root,-)
 %doc LICENSE.txt README.txt
 %{_bindir}/%{name}
 %dir %{_datadir}/pixmaps/%{name}
