@@ -27,7 +27,7 @@ strokes or mouse actions, letting you control any XWindows program with your
 game controller.
 
 %prep
-%autosetup -n qjoypad-%{commit0}
+%autosetup -n %{name}-%{commit0}
 
 %build
 %cmake .
