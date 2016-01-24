@@ -11,13 +11,13 @@ License: GPLv2
 Url: https://github.com/panzi/qjoypad
 Source0: https://github.com/panzi/qjoypad/archive/%{commit0}.tar.gz#/qjoypad-%{shortcommit0}.tar.gz
 
+BuildRequires: pkgconfig(Qt5LinguistTools)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Widgets)
-BuildRequires: pkgconfig(xtst)
 BuildRequires: pkgconfig(libudev)
+BuildRequires: pkgconfig(xtst)
+BuildRequires: pkgconfig(Qt5)
 BuildRequires: desktop-file-utils
-BuildRequires: qt5-qtbase-devel
-BuildRequires: qt5-linguist
 BuildRequires: gcc-c++
 BuildRequires: cmake
 
