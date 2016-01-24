@@ -15,7 +15,6 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(libudev)
 BuildRequires: pkgconfig(xtst)
-BuildRequires: pkgconfig(Qt5)
 
 BuildRequires: desktop-file-utils
 BuildRequires: qt5-linguist
