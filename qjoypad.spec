@@ -38,7 +38,7 @@ game controller.
 %find_lang %{name} --with-qt
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
