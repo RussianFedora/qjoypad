@@ -4,8 +4,8 @@ Release: 1%{?dist}
 Summary: Remap joystick events as keyboard or mouse events
 
 License: GPLv2
-Url: https://github.com/panzi/qjoypad
-Source0: https://github.com/panzi/qjoypad/archive/v%{version}.tar.gz#/qjoypad-%{version}.tar.gz
+Url: https://github.com/panzi/%{name}
+Source0: https://github.com/panzi/%{name}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Widgets)
