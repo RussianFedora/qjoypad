@@ -1,21 +1,26 @@
-Name: qjoypad
-Version: 4.3.0
-Release: 1%{?dist}
-Summary: Remap joystick events as keyboard or mouse events
+Name:           qjoypad
+Version:        4.3.0
+Release:        2%{?dist}
+Summary:        Remap joystick events as keyboard or mouse events
 
-License: GPLv2
-Url: https://github.com/panzi/%{name}
-Source0: https://github.com/panzi/%{name}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+License:        GPLv2+
+URL:            https://github.com/panzi/%{name}
+Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: pkgconfig(Qt5X11Extras)
-BuildRequires: pkgconfig(Qt5Widgets)
-BuildRequires: pkgconfig(libudev)
-BuildRequires: pkgconfig(xtst)
+BuildRequires:  gcc-c++
+BuildRequires:  cmake
 
-BuildRequires: desktop-file-utils
-BuildRequires: qt5-linguist
-BuildRequires: gcc-c++
-BuildRequires: cmake
+BuildRequires:  cmake(Qt5Widgets)
+BuildRequires:  cmake(Qt5LinguistTools)
+BuildRequires:  cmake(Qt5X11Extras)
+BuildRequires:  pkgconfig(libudev)
+# linked by name
+BuildRequires:  libXtst-devel
+BuildRequires:  libX11-devel
+
+BuildRequires:  /usr/bin/desktop-file-validate
+
+Requires:       hicolor-icon-theme
 
 %description
 QJoyPad takes input from a gamepad or joystick and translates it into key
@@ -23,14 +28,19 @@ strokes or mouse actions, letting you control any XWindows program with your
 game controller.
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup
+mkdir build
 
 %build
-%cmake .
-%make_build
+pushd build
+  %cmake ..
+  %make_build
+popd
 
 %install
-%make_install
+pushd build
+  %make_install
+popd
 %find_lang %{name} --with-qt
 
 %check
@@ -49,13 +59,20 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %files -f %{name}.lang
-%doc README.md INSTALL.txt
 %license LICENSE.txt
+%doc README.md INSTALL.txt
 %{_bindir}/%{name}
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Sun Jun 26 2016 Igor Gnatenko <i.gnatenko.brain@gmail.com> - 4.3.0-2
+- License actually is GPLv2+, not GPLv2
+- Make out-of-tree builds
+- Use cmake() style dependencies
+- Add missing Requires: hicolor-icon-theme
+- Trivial fixes
+
 * Sun Apr 03 2016 V1TSK <vitaly@easycoding.org> - 4.3.0-1
 * Updated to 4.3.0.
 
